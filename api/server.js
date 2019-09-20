@@ -1,10 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
-const bcrypt = require('bcryptjs');
-const session = require('express-session'); // <<<<<<<<<<<<<<<<<<<<<
-const KnexSessionStore = require('connect-session-knex')(session); // gotcha
-const jwt = require('jsonwebtoken');
+const session = require('express-session');
+const KnexSessionStore = require('connect-session-knex')(session);
 
 const authenticate = require('../auth/authenticate-middleware.js');
 const authRouter = require('../auth/auth-router.js');
